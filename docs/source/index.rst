@@ -360,8 +360,8 @@ To reproduce hardening this project, run the following:
 
 .. code:: bash
 
-   # Run openlane to harden user_proj_example
-   make user_proj_example
+   # Run openlane to harden user_project
+   make user_project
    # Run openlane to harden user_project_wrapper
    make user_project_wrapper
 
