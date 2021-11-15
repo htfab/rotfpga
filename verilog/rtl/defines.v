@@ -4,13 +4,13 @@
 `default_nettype none
 
 // width of cell grid
-`define WIDTH 12
+`define WIDTH 24
 
 // height of cell grid
-`define HEIGHT 12
+`define HEIGHT 24
 
 // size of width/height field, i.e. clog2(max(WIDTH, HEIGHT))
-`define ADDRSIZE 4
+`define ADDRSIZE 5
 
 // number of input pins = number of output pins
 `define IOPAIRS 12
@@ -25,7 +25,7 @@
 `define Y_FIRST 0
 
 // y coordinate difference of successive input/output pin pairs
-`define Y_STEP 1
+`define Y_STEP 2
 
 `default_nettype wire
 
