@@ -1,11 +1,16 @@
-# Caravel User Project
+# ROTFPGA
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![UPRJ_CI](https://github.com/efabless/caravel_project_example/actions/workflows/user_project_ci.yml/badge.svg)](https://github.com/efabless/caravel_project_example/actions/workflows/user_project_ci.yml) [![Caravel Build](https://github.com/efabless/caravel_project_example/actions/workflows/caravel_build.yml/badge.svg)](https://github.com/efabless/caravel_project_example/actions/workflows/caravel_build.yml)
+![Logic tile](img/rotfpga.svg)
 
-| :exclamation: Important Note            |
-|-----------------------------------------|
+A reconfigurable logic circuit made of identical rotatable copies of the tile shown above
+containing a NAND gate, a D flip-flop and a buffer. 
+Theoretically any circuit can be built from copies of this single tile.
+In practice it's quite a challenge.
 
-## Please fill in your project documentation in this README.md file 
+Tiles are arranged in a `WIDTH` × `HEIGHT` array wrapping around at the edges.
+A few tiles are configured as IO where the flip-flop is connected to an input or output pin.
+Tiles are initially in the orientation shown above but they can be rotated
+counterclockwise by writing anything to their address using the wishbone bus.
 
+This design is an entry for the MPW3 shuttle and was created from concept to tapeout within 24 hours.
 
-Refer to [README](docs/source/index.rst) for this sample project documentation. 
