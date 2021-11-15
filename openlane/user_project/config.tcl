@@ -19,21 +19,27 @@ set ::env(DESIGN_NAME) user_project
 
 set ::env(VERILOG_FILES) "\
 	$::env(CARAVEL_ROOT)/verilog/rtl/defines.v \
+	$script_dir/../../verilog/rtl/defines.v \
+	$script_dir/../../verilog/rtl/logic_cell.v \
+	$script_dir/../../verilog/rtl/logic_grid.v \
 	$script_dir/../../verilog/rtl/user_project.v"
 
 set ::env(DESIGN_IS_CORE) 0
 
-set ::env(CLOCK_PORT) "wb_clk_i"
-set ::env(CLOCK_NET) "counter.clk"
+set ::env(SYNTH_NO_FLAT) 1
+
+set ::env(CLOCK_PORT) ""
+set ::env(CLOCK_NET) "wb_clk_i"
 set ::env(CLOCK_PERIOD) "10"
+#set ::env(BASE_SDC_FILE) "$::env(DESIGN_DIR)/base.sdc"
 
 set ::env(FP_SIZING) absolute
-set ::env(DIE_AREA) "0 0 900 600"
+set ::env(DIE_AREA) "0 0 1200 1200"
 
 set ::env(FP_PIN_ORDER_CFG) $script_dir/pin_order.cfg
 
 set ::env(PL_BASIC_PLACEMENT) 1
-set ::env(PL_TARGET_DENSITY) 0.05
+set ::env(PL_TARGET_DENSITY) 0.02
 
 # Maximum layer used for routing is metal 4.
 # This is because this macro will be inserted in a top level (user_project_wrapper) 
